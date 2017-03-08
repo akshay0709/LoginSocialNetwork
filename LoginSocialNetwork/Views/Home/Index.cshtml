@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Login with Social media";
+}
+<script>
+    $(document).ready(function () {
+        $("#divLogout").append('<div style="display:none"><iframe src="https://instagram.com/accounts/logout/" width="0" height="0"></iframe></div>');
+        $("#divLogout").append('<div style="display:none"><iframe src="https://www.facebook.com/logout.php" width="0" height="0"></iframe></div>');
+    });
+</script>
+<a class="btn btn-social btn-instagram" href="@Url.Action("LoginInstagram","Home")">
+    <span class="fa fa-instagram"></span> Sign in with Instagram
+</a><br>
+<a class="btn btn-social btn-facebook" href="@Url.Action("LoginFacebook","Home")">
+    <span class="fa fa-facebook"></span> Sign in with Facebook
+</a>
+<div id="divLogout">
+</div>
